@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/movie-list-style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+            rel="stylesheet"
+            />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            />
+        <title>Movie-App</title>
+
+    </head>
+
+    <body>
+        <!--Navigation Start-->
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="logo-container">
+                    <h1 class="logo">Movie-App</h1>
+                </div>
+                <div class="menu-container">
+                    <ul class="menu-list">
+                        <li class="menu-list-item active"><a th:href="@{/}">Home </a> </li>
+                        <li class="menu-list-item"><a th:href="@{/movie/list}">Movies</a> </li>
+                        <li class="menu-list-item"><a th:href="@{/series}">Series</a> </li>
+                        <li class="menu-list-item"><a th:href="@{/lastadditions}">Popular</a> </li>
+                        <li class="menu-list-item"><a th:href="@{/trends}">Trends</a> </li>
+                    </ul>
+                </div>
+                <div class="profile-container">
+                    <img
+                        class="profile-picture"
+                        src="img/pngkey.com-admin-png-2635979.png"
+                        alt=""
+                        />
+                    <div class="profile-text-container">
+                        <span class="profile-text">Profile </span>
+                        <i class="fas fa caret-down"></i>
+                    </div>
+                    <div class="toggle">
+                        <i class="fas fa-moon toggle-icon"></i>
+                        <i class="fas da-sun toggle-icon"></i>
+                        <div class="toggle-ball"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation End-->
+
+        <!--Start Sidebar-->
+        <div class="sidebar">
+            <i class="left-menu-icon fas fa-search"></i>
+            <i class="left-menu-icon fas fa-home"></i>
+            <i class="left-menu-icon fas fa-users"></i>
+            <i class="left-menu-icon fas fa-bookmark"></i>
+            <i class="left-menu-icon fas fa-tv"></i>
+            <i class="left-menu-icon fas fa-hourglass-start"></i>
+            <i class="left-menu-icon fas fa-shopping-cart"></i>
+        </div>
+        <!--End Sidebar-->
+        
+        
+        <div>Action Movies</div>
+
+        <table class="table table-dark">
+            <thead>               
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Plot</th>
+                <th scope="col">Year</th>
+                <th scope="col">Director</th>
+                <th scope="col">Rating</th>               
+                <th scope="col">Quantity</th>                              
+                <th scope="col">Price</th>
+
+            </thead>
+
+
+
+            <tr th:each="m: ${listactions}">
+
+                <td th:text="${m.movieId}"/>
+                <td th:text="${m.movieTitle}"/>
+                <td th:text="${m.moviePlot}"/>
+                <td th:text="${m.movieYear}"/>
+                <td th:text="${m.movieDirector}"/>
+                <td th:text="${m.movieRating}"/>
+                <td th:text="${m.movieQuantity}"/>
+                <td th:text="${m.moviePrice}"/>
+                <td> <a th:href="@{/movie/update/{id}(id = ${m.movieId})}">Update</a> </td>
+                <td> <a th:href="@{/movie/delete/{id}(id = ${m.movieId})}">Delete</a>  </td>               
+            </tr>
+        </table>
+
+    </body>
+</html>

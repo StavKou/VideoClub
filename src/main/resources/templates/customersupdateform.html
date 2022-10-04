@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+
+    </head>
+    <!--        Header Section-->
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/movie/list}">Movies</a></li>
+                <li><a th:href="@{/lastadditions}">Latest Additions</a></li>
+                <li><a th:href="@{/series}">Series</a></li>
+                <li><a th:href="@{/animations}">Animations</a></li>
+
+                <li><a th:href="@{/category}">Movie Categories</a>
+                    <!--                    Drop Down Menu-->
+                    <ul>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Thriller</a></li>
+                        <li><a href="#">Horror</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Drama</a></li>
+                        <li><a href="#">Sport</a></li>
+                    </ul>
+                </li>
+
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/admin}">Admin</a>
+                    <!--                    Drop Down Menu-->
+                    <ul>
+                        <li><a th:href="@{/movie/insert/form}">Insert Movie</a></li>
+                        <li><a th:href="@{/customers/list}">List Customers</a></li>
+                        <li><a th:href="@{/customers/insert/form}">Register Customer</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    <!--End of Header Section-->
+
+
+
+    <body>
+
+        <form action="#" th:action="@{/customers/doupdate}" th:object="${customerupdate}" method="post">   
+
+            <div>
+                <input type="hidden"  id="movieId" th:field ="*{customerId}" />
+            </div>    
+            <div>
+                <label>UserName </label>
+                <input type="text" id="username" th:field="*{username}"  placeholder="username" />
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" th:field="*{password}"  required/> 
+                <span th:errors ="*{password}"></span>
+            </div>
+            <div>
+                <label>First Name </label> 
+                <input type="text" id="cusFName" th:field="*{cusFName}" placeholder="FirstName" /> 
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" id="cusLName" th:field="*{cusLName}" placeholder="LastName" />
+            </div>
+            <div>
+                <label>Date Of Birth</label>
+                <input type="text" id="dateOfBirth" th:field="*{dateOfBirth}" placeholder="dateOfBirth" />
+            </div>
+            <div>
+                <label>City</label>
+                <input type="text" id="city" th:field="*{city}" placeholder="city" />
+            </div>
+            <div>
+                <label>Street Address</label>
+                <input type="text" id="streetAddress" th:field="*{streetAddress}" placeholder="streetAddress"/>
+            </div>
+            <div>
+                <label>Street Number</label>
+                <input type="text" id="streetNumber" th:field="*{streetNumber}" placeholder="streetNumber"/>
+            </div>
+            <div>
+                <label>Telephone Number</label>
+                <input type="text" id="telephoneNumber" th:field="*{telephoneNumber}" placeholder="telephoneNumber"/>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="text" id="email" th:field="*{email}" placeholder="email"/>
+            </div>
+            <div>
+                <label>TK</label>
+                <input type="text" id="tk" th:field="*{tk}" placeholder="tk"/>
+            </div>
+            <div>
+                <input type="submit"> 
+            </div>
+
+        </form>
+
+    </body>
+</html>

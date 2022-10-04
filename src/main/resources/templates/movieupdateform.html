@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+
+    </head>
+    <!--        Header Section-->
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/movie/list}">Movies</a></li>
+                <li><a th:href="@{/lastadditions}">Latest Additions</a></li>
+                <li><a th:href="@{/series}">Series</a></li>
+                <li><a th:href="@{/animations}">Animations</a></li>
+
+                <li><a th:href="@{/category}">Movie Categories</a>
+                    <!--                    Drop Down Menu-->
+                    <ul>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Thriller</a></li>
+                        <li><a href="#">Horror</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Drama</a></li>
+                        <li><a href="#">Sport</a></li>
+                    </ul>
+                </li>
+
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/admin}">Admin</a>
+                    <!--                    Drop Down Menu-->
+                    <ul>
+                        <li><a th:href="@{/movie/insert/form}">Insert Movie</a></li>
+                        <li><a th:href="@{/customers/list}">List Customers</a></li>
+                        <li><a th:href="@{/customers/insert/form}">Register Customer</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    <!--End of Header Section-->
+    
+    
+    
+                <body>
+
+                       <form action="#" th:action="@{/movie/doupdate}" th:object="${movieupdate}" method="post">
+                        
+                        <div>
+                            <input type="hidden"  id="movieId" th:field ="*{movieId}" />
+                        </div>    
+                        <div>
+                            <label>Title </label>
+                          <input type="text" id="movieTitle" th:field="*{movieTitle}"  placeholder="movieTitle" />
+
+                        </div>
+                        <div>
+                            <label>Plot </label> 
+                            <input type="text" id="moviePlot" th:field="*{moviePlot}" placeholder="moviePlot" /> 
+                        </div>
+                        <div>
+                            <label>Year</label>
+                            <input type="text" id="movieYear" th:field="*{movieYear}" placeholder="movieYear" />
+                        </div>
+                        <div>
+                            <label>Director</label>
+                            <input type="text" id="movieDirector" th:field="*{movieDirector}" placeholder="movieDirector" />
+                        </div>
+                        <div>
+                            <label>Rating</label>
+                            <input type="text" id="movieRating" th:field="*{movieRating}" placeholder="movieRating" />
+                        </div>
+                        <div>
+                            <label>Quantity</label>
+                            <input type="text" id="movieQuantity" th:field="*{movieQuantity}" placeholder="movieQuantity"/>
+                        </div>
+                        <div>
+                            <label>Price</label>
+                            <input type="text" id="moviePrice" th:field="*{moviePrice}" placeholder="moviePrice"/>
+                        </div>
+                        <div>
+                            <input type="submit"> 
+                        </div>
+
+                    </form>
+
+                </body>
+
+                </html>

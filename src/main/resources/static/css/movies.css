@@ -1,0 +1,400 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&family=Sen:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    background-color: blanchedalmond;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    font-family: 'Sen', sans-serif;
+    font-size: 30px;
+    color: red;
+}
+
+.menu-container {
+    flex: 6;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item {
+    margin-right: 30px;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container {
+    margin: 0 20px;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+.toggle-icon {
+    color: goldenrod;
+}
+
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.sidebar {
+    /* justify-content:space-around; */
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    align-items: center;
+}
+
+
+.left-menu-icon {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.container {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+}
+
+
+.content-container {
+    margin-left: 50px;
+}
+
+/* Photo of Movie */
+
+.featured-content {
+    height: 50vh;
+    padding: 40px;
+    background-color: #3a3a3a;
+}
+
+
+.featured-title {
+    width: 300px;
+
+}
+
+.featured-desc {
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0;
+}
+
+.featured-button {
+    background-color: #4bdf00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.movie-list-container {
+    padding: 0 20px;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+    margin-right: 30px;
+    position: relative;
+
+}
+
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+}
+
+
+
+.movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.movie-list-item-title {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desc {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+/* BUY BUTTON */
+.movie-list-item-button {
+    width: 120px;
+    background-color: burlywood;
+    color: azure;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    border-radius: 2px;
+    border: 2px solid #151515;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.movie-list-item-button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+
+.container.active {
+    background-color: #fff;
+}
+
+.movie-list-title {
+    color: black;
+}
+
+
+
+.navbar-container {
+    background-color: #fff;
+    color: black;
+}
+
+
+.sidebar {
+    background-color: white;
+
+}
+
+.left-menu-icon.active {
+    color: black;
+}
+
+.toggle.active {
+    background-color: black;
+}
+
+.toggle-ball.active {
+    background-color: #fff;
+    transform: translateX(-20px);
+}
+
+.movie-container {
+    background-color: #fff;
+    color: #8a0000;
+    width: 700px;
+    height: 800px;
+}
+
+.container-of-movie {
+    background-color: #151515;
+    color: black;
+    overflow: hidden;
+    width: 80%;
+    margin-left: 50px;  
+}
+
+.movie-title {
+    height: 35px;
+    align-content: center;
+    background-color: activeborder;
+    color: #4dbf00;
+    font-size: 30px;
+    border: 1px #151515;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.production {
+    height: 50vh;
+    padding: 40px;
+    background-color: #3a3a3a;
+    overflow: hidden;
+    text-align: center;
+}
+
+.plot-container {
+    background-color: #8a0000;
+    position: relative;
+    padding-top: 100px;
+    /*     left: 400px;*/
+}
+
+.plot-container p {
+    padding-top: -10px;
+    text-align: center;
+}
+
+.plot p {
+    height: 40px;
+    align-content: center;
+    background-color: activeborder;
+    color: #FFF;
+    font-size: 18px;
+    border: 1px black;
+    overflow: hidden;
+}
+
+.featured-content img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+}
+
+.price {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: #151515;
+    color: bisque;
+    justify-content: center;
+    border: 2px solid #151515;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.title {
+    margin: 20px;
+    padding: 20px;
+    border-color: #fff;
+    text-align: center;
+    color: bisque;
+    align-items: center;
+}
+
+.production {
+    height: 30px;
+    align-content: center;
+    background-color: activeborder;
+    color: #FFF;
+    font-size: 18px;
+    border: 1px black;
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 940px) {
+    .menu-container {
+        display: none;
+    }
+
+}
+
