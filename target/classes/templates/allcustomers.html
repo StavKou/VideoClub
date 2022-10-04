@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+
+    </head>
+    <!--        Header Section-->
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/movie/list}">Movies</a></li>
+                <li><a th:href="@{/lastadditions}">Latest Additions</a></li>
+                <li><a th:href="@{/series}">Series</a></li>
+                <li><a th:href="@{/animations}">Animations</a></li>
+
+                <li><a th:href="@{/category}">Movie Categories</a>
+                    <!--                    Drop Down Menu-->
+                    <ul>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Thriller</a></li>
+                        <li><a href="#">Horror</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Drama</a></li>
+                        <li><a href="#">Sport</a></li>
+                    </ul>
+                </li>
+
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/admin}">Admin</a>
+                    <!--                    Drop Down Menu-->
+                    <ul>
+                        <li><a th:href="@{/movie/insert/form}">Insert Movie</a></li>
+                        <li><a th:href="@{/customers/list}">List Customers</a></li>   
+                        <li><a th:href="@{/customers/insert/form}">Register Customer</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    <!--End of Header Section-->
+    
+    
+    <body>
+        <p>All Customers page</p>
+        
+        <a th:href="@{/customers/insert/form}">Insert Customer:</a>
+
+        <table class="table table-dark">
+            <thead>               
+                <th scope="col">ID</th>
+                <th scope="col">UserName</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Date Of Birth</th>
+                <th scope="col">City</th>               
+                <th scope="col">Street Address</th>                              
+                <th scope="col">Street Number</th>
+                <th scope="col">Telephone Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">TK</th>
+
+            </thead>
+
+
+
+            <tr th:each="c: ${listofcustomers}">
+
+                <td th:text="${c.customerId}"/>
+                <td th:text="${c.username}"/>
+                <td th:text="${c.cusFName}"/>
+                <td th:text="${c.cusLName}"/>
+                <td th:text="${c.dateOfBirth}"/>
+                <td th:text="${c.city}"/>
+                <td th:text="${c.streetAddress}"/>
+                <td th:text="${c.streetNumber}"/>
+                <td th:text="${c.telephoneNumber}"/>
+                <td th:text="${c.email}"/>
+                <td th:text="${c.tk}"/>
+                <td> <a  th:href="@{/customers/update/{id}(id = ${c.customerId})}">Update</a> </td>
+                <td> <a  th:href="@{/customers/delete/{id}(id = ${c.customerId})}">Delete</a>  </td>               
+            </tr>
+
+    </body>
+</html>

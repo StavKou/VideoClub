@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+
+    </head>
+    <!--Navigation Start-->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">Movie-App</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active"><a th:href="@{/}">Home </a> </li>
+                    <li class="menu-list-item"><a th:href="@{/movie/list}">Movies</a> </li>
+                    <li class="menu-list-item"><a th:href="@{/series}">Series</a> </li>
+                    <li class="menu-list-item"><a th:href="@{/lastadditions}">Popular</a> </li>
+                    <li class="menu-list-item"><a th:href="@{/trends}">Trends</a> </li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img
+                    class="profile-picture"
+                    src="img/pngkey.com-admin-png-2635979.png"
+                    alt=""
+                    />
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile </span>
+                    <i class="fas fa caret-down"></i>
+                </div>
+                <div class="profile-text-container">
+                    <i class="fa-solid fa-key"></i>
+                    <span class="profile-text-login"><a th:href="@{/loginuser}">Login</a></span>
+                </div>
+                <div class="profile-text-container">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <span class="profile-text-signup"><a th:href="@{/customers/insert/form}">Sign Up</a></span>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas da-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation End-->
+
+    <!--Start Sidebar-->
+    <div class="sidebar">
+        <i class="left-menu-icon fas fa-search"></i>
+        <i class="left-menu-icon fas fa-home"></i>
+        <i class="left-menu-icon fas fa-users"></i>
+        <i class="left-menu-icon fas fa-bookmark"></i>
+        <i class="left-menu-icon fas fa-tv"></i>
+        <i class="left-menu-icon fas fa-hourglass-start"></i>
+        <i class="left-menu-icon fas fa-shopping-cart"></i>
+    </div>
+    <!--End Sidebar-->
+
+
+
+
+    <body>
+        <div>Insert Customer Form:</div>
+        
+            <form th:action="@{/customers/doinsert}" th:object="${newcustomer}" method="POST">
+                <div>
+                    <label>UserName</label>
+                    <input type="text" th:field="*{username}"  required/>
+                    <span th:errors ="*{username}"></span>
+                </div>
+
+                <div>
+                    <label>Password</label>
+                    <input type="password" th:field="*{cpassword}"  required/> 
+                    <span th:errors ="*{cpassword}"></span>
+                </div>
+                <div>
+                    <label>First Name</label>
+                    <input type="text" th:field="*{cusFName}"  required/> 
+                    <span th:errors ="*{cusFName}"></span>
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" th:field="*{cusLName}"  required/> 
+                    <span th:errors ="*{cusLName}"></span>
+                </div>
+                <div>
+                    <label>Date Of Birth</label>
+                    <input type="text" th:field="*{dateOfBirth}"    required/>
+                    <span th:errors ="*{dateOfBirth}"></span>
+                </div>
+                <div>
+                    <label>City</label>
+                    <input type="text" th:field="*{city}"  required/> 
+                    <span th:errors ="*{city}"></span>
+                </div>
+                <div>
+                    <label>Street Address</label>
+                    <input type="text" th:field="*{streetAddress}"  required/> 
+                    <span th:errors ="*{streetAddress}"></span>
+                </div>
+                <div>
+                    <label>Street Number</label>
+                    <input type="text" th:field="*{streetNumber}"  required/> 
+                    <span th:errors ="*{streetNumber}"></span>
+                </div>
+                <div>
+                    <label>Telephone Number</label>
+                    <input type="text" th:field="*{telephoneNumber}"  required/> 
+                    <span th:errors ="*{telephoneNumber}"></span>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" th:field="*{email}"  required/> 
+                    <span th:errors ="*{email}"></span>
+                </div>
+                <div>
+                    <label>T.K</label>
+                    <input type="text" th:field="*{tk}"  required/> 
+                    <span th:errors ="*{tk}"></span>
+                </div>
+                <label>Submit</label>
+                <input type="submit"/>
+            </form>
+
+        <script src="/js/app.js"></script>
+    </body>
+</html>

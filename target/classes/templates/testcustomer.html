@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link th:href="@{/css/movies.css}" rel="stylesheet" />
+            <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+            <script async="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <!--        <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-50453376-1');</script>-->
+            <!--        <style>@media screen and (-webkit-min-device-pixel-ratio:0){#searchbox{float:left;margin-top:10px;padding:1px 0px 3px 5px}#searchbutton{margin:4px 0px 0px 8px}#subbox{float:left;margin:8px 0px 0px 15px}#subbutton{margin:5px 0px 0px 15px}}</style>-->
+    </head>
+
+
+    <body>
+        <div id="wrapper">
+            <div id="topnavbar">
+                <div class="topnavbarleft">
+                    <div class="toplamfilm">There are 985 movies</div>
+                </div>
+                <div class="topnavbarright">
+                    <a th:href="@{/customers/insert/form}" class="favo">Become member</a>
+                    <a th:href="@{/login}" class="inde">Sign In</a>
+                </div>
+            </div>
+            <div id="header">
+                <div class="headerleft">
+                    <a th:href="@{/}">
+                        <img src="/image/vintage_logo.jpg" alt="Vintage VideoClub">
+                    </a>
+                </div>
+                <div class="arama">
+                    <form id="searchform" method="get" action="....">
+                        <input title="tainiesonline" type="text" value="Αναζήτηση" name="s" id="searchbox" 
+                               onfocus="if (this.value == 'Αναζήτηση') {
+                                           this.value = '';
+                                       }" 
+                               onblur="if (this.value == '') {
+                                           this.value = 'Αναζήτηση';
+                                       }">
+                            <input title="tainiesonline" type="submit" id="searchbutton" value="">
+                                </form>
+                                </div>
+                                <div class="headerright">
+                                    <!-- Edw bainoun ta link gia facebook instagram kai oti allo theloume -->
+                                </div>
+                                </div>
+                                </div>
+
+                                <!--        Header Section-->
+                                <div id="container">
+                                    <nav>
+                                        <ul>
+                                            <li><a th:href="@{/}">Home</a></li>
+                                            <li><a th:href="@{/movie/list}">Movies</a></li>
+                                            <li><a th:href="@{/lastadditions}">Latest Additions</a></li>
+                                            <li><a th:href="@{/series}">Series</a></li>
+                                            <li><a th:href="@{/animations}">Animations</a></li>
+
+                                            <li><a th:href="@{/category}">Movie Categories</a>
+                                                <!--                    Drop Down Menu-->
+                                                <ul>
+                                                    <li><a href="#">Comedy</a></li>
+                                                    <li><a href="#">Thriller</a></li>
+                                                    <li><a href="#">Horror</a></li>
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Drama</a></li>
+                                                    <li><a href="#">Sport</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a th:href="@{/login}">Login</a></li>
+                                            <li><a th:href="@{/admin}">Admin</a>
+                                                <!--                    Drop Down Menu-->
+                                                <ul>
+                                                    <li><a th:href="@{/movie/insert/form}">Insert Movie</a></li>
+                                                    <li><a th:href="@{/customers/list}">List Customers</a></li> 
+                                                    <li><a th:href="@{/customers/insert/form}">Register Customer</a></li> 
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+
+                                    <h1>Retro Vintage Video Club!</h1>
+                                    <p> A simple dropdown navigation menu made with CSS Only. Dropdowns are marked with a plus sign ( + )</p>
+                                </div>
+
+                                <div id="content">
+
+                                    <div class="leftC">
+                                        <script src="..."></script>
+                                        <script>stepcarousel.setup({galleryid: 'mygallery', beltclass: 'belt', panelclass: 'panel',
+                                       panelbehavior: {speed: 500, wraparound: true, persist: true}, defaultbuttons: {enable: true, moveby: 2,
+                                           leftnav: ['https://xrysoi.pro/static/images/scar1.png', -12, 4],
+                                           rightnav: ['https://xrysoi.pro/static/images/scar2.png', -9, 4]},
+                                       statusvars: ['statusA', 'statusB', 'statusC'],
+                                       contenttype: ['external']});
+                                        </script>
+                                        <style type="text/css">
+                                            #mygallery{overflow: hidden;}
+                                        </style>
+
+
+
+                                        <!-- UPPER BODY -->
+                                        <div class="filmborder">
+                                            <div class="filmcontent">
+                                                <div class="yazitip">
+                                                    Vintage Movies
+                                                    <em style="font-size: 12px; color: #ccc">Top Movies</em>
+                                                </div>
+
+                                                <div id="myslides">
+                                                    <div id="mygallery" class="stepcarousel1">
+                                                        <div class="belt">
+
+                                                            <!-- 1 movie -->
+                                                            <div class="panel">
+                                                                <a th:href=".....">
+                                                                    <img src="image/fightclub.jpg" alt="Fight Club" height="138px" width="110px" title="Fight Club (1999)">
+                                                                </a>
+                                                            </div>
+
+                                                            <!-- 2 movie -->
+                                                            <div class="panel">
+                                                                <a th:href=".....">
+                                                                    <img src="image/mummy.jpg" alt="Mummy" height="138px" width="110px" title="Mummy (1999)">
+                                                                </a>
+                                                            </div>
+
+                                                            <!-- 3 movie -->
+                                                            <div class="panel">
+                                                                <a th:href=".....">
+                                                                    <img src="image/jaws.jpg" alt="Jaws" height="138px" width="110px" title="Jaws (1999)">
+                                                                </a>
+                                                            </div>
+
+                                                            <!-- 4 movie -->
+                                                            <div class="panel">
+                                                                <a th:href=".....">
+                                                                    <img src="image/thematrix.jpg" alt="The Matrix" height="138px" width="110px" title="The Matrix (1999)">
+                                                                </a>
+                                                            </div>
+                                                            
+                                                            <!-- 5 movie -->
+                                                            <div class="panel">
+                                                                <a th:href=".....">
+                                                                    <img src="image/fightclub.jpg" alt="Fight Club" height="138px" width="110px" title="Fight Club (1999)">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- MAIN BODY -->
+                                        <div class="filmborder">
+                                            <div class="filmcontent">
+                                                <h1 class="yazitip">All Movies</h1>
+
+                                                <!-- 1 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="image/fightclub.jpg" alt="Fight Club 1999" height="125px" width="119px" title="Fight Club (1999)">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">Fight Club (1999)</a>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- 2 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="image/mummy.jpg" alt="The Mummy 1999" height="125px" width="119px" title="The Mummy (1999)">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">The Mummy (1999)</a>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- 3 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href="....."><!-- 1 movie -->
+                                                        <img src="image/jaws.jpg" alt="Jaws 1999" height="125px" width="119px" title="Jaws (1999)">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">Jaws (1999)</a>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- 4 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="image/thematrix.jpg" alt="The Matrix 1999" height="125px" width="119px" title="The Matrix (1999)">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">The Matrix (1999)</a>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- 5 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- 6 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 7 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 8 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 9 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 10 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 11 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 12 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 13 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 14 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 15 movie -->
+                                                <div class="moviefilm">
+                                                    <a th:href=".....">
+                                                        <img src="....." alt="...." height="125px" width="119px" title="....">
+                                                    </a>
+                                                    <div class="movief">
+                                                        <a th:href=".....">.....</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="filmborder">
+                                            <div class="filmcontent">
+                                                <div class="wp-pagenavi">
+                                                    <span>Page 2 to 10</span>
+                                                    <a class="previouspostlink" rel="prev" href="....."><<</a>
+                                                    <a class="page smaller" href=".....">1</a>
+
+                                                    <span class="current">2</span>
+                                                    <a class="page larger" href=".....">3</a>
+                                                    <a class="page larger" href=".....">4</a>
+                                                    <a class="page larger" href=".....">5</a>
+                                                    <span class="extend">...</span>
+                                                    <a class="larger page" href="....">10</a>
+                                                    <span class="extend">...</span>
+                                                    <a class="nextpostlink" rel="next" href="....">>></a>
+                                                    <a class="last" href=".....">Last</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="sidebar">
+                                        <div class="sidebarborder">
+                                            <div class="sidebar-right">
+                                                <h2>Categories</h2>
+                                                <ul>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Movies 2006">2006</a>
+                                                    </li>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Movies 2007">2007</a>
+                                                    </li>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Movies 2008">2008</a>
+                                                    </li>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Movies 2009">2009</a>
+                                                    </li>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Movies 2010">2010</a>
+                                                    </li>
+
+                                                    <!-- CATEGORIES -->
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Action Movies">Action</a>
+                                                    </li>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Thriller Movies">Thriller</a>
+                                                    </li>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Horror Movies">Horror</a>
+                                                    </li>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Drama Movies">Drama</a>
+                                                    </li>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Comedy Movies">Comedy</a>
+                                                    </li>
+                                                    <li class="cat-item">
+                                                        <a href="....." title="Sport Movies">Sport</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FOOTER -->
+                                <div style="clear:both;"></div>
+                                <div class="footborder"></div>
+                                <div id="footer">
+                                    <div class="footer clearfix">
+                                        <div class="footerleft">
+                                            " Copyright c 2022"
+                                            <a th:href="@{/}">Vintage Movies</a>
+                                            </br>
+                                        </div>
+                                        <div class="footeright"></div>
+                                    </div>
+                                </div>
+
+                                <style>
+                                    .su-spoiler-title{padding:5px 10px;background:#818181;color:#0f0;font-size:13px}.su-spoiler-content{padding:1em 10px;background:#ccc;color:#333}
+                                </style>
+
+                                </body>
+                                </html>

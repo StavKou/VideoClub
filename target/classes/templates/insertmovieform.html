@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/thymeleaf.html to edit this template
+-->
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+
+    </head>
+    <!--        Header Section-->
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/movie/list}">Movies</a></li>
+                <li><a th:href="@{/lastadditions}">Latest Additions</a></li>
+                <li><a th:href="@{/series}">Series</a></li>
+                <li><a th:href="@{/animations}">Animations</a></li>
+
+                <li><a th:href="@{/category}">Movie Categories</a>
+                    <!--                    Drop Down Menu-->
+                    <ul>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Thriller</a></li>
+                        <li><a href="#">Horror</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Drama</a></li>
+                        <li><a href="#">Sport</a></li>
+                    </ul>
+                </li>
+
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/admin}">Admin</a>
+                    <!--                    Drop Down Menu-->
+                    <ul>
+                        <li><a th:href="@{/movie/insert/form}">Insert Movie</a></li>
+                        <li><a th:href="@{/customers/list}">List Customers</a></li>
+                        <li><a th:href="@{/customers/insert/form}">Register Customer</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    <!--End of Header Section-->
+    
+    <body>
+    
+        <form th:action="@{/movie/doinsert}" th:object="${newmovie}" method="POST">
+            <div>
+                <label>Title</label>
+                <input type="text" th:field="*{movieTitle}"  required/> 
+            </div>
+            <div>
+                <label>Plot</label>
+                <input type="text" th:field="*{moviePlot}"  required/> 
+            </div>
+            <div>
+                <label>Year</label>
+                <input type="text" th:field="*{movieYear}"  required/> 
+            </div>
+            <div>
+                <label>Director</label>
+                <input type="text" th:field="*{movieDirector}"  required/> 
+            </div>
+            <div>
+                <label>Rating</label>
+                <input type="text" th:field="*{movieRating}"  required/> 
+            </div>
+            <div>
+                <label>Quantity</label>
+                <input type="text" th:field="*{movieQuantity}"  required/> 
+            </div>
+            <div>
+                <label>Price</label>
+                <input type="text" th:field="*{moviePrice}"  required/> 
+            </div>
+            <label>Submit</label>
+            <input type="submit"/>
+        </form>
+
+
+
+       
+
+    </body>
+
+</html>
